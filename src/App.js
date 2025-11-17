@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState, useEffect } from "react";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,10 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+/* ADD: Reveal provider and styles */
+import RevealProvider from "./components/Reveal/RevealProvider";
+import "./components/Reveal/reveal.css";
+
 function App() {
   const [load, upadateLoad] = useState(true);
 
@@ -36,6 +41,8 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
+        {/* mount once for site-wide scroll reveal behavior */}
+        <RevealProvider />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
