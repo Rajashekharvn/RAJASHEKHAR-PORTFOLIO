@@ -1,3 +1,4 @@
+// src/components/Home/Home2.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.png";
@@ -16,11 +17,11 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={8} className="home-about-description reveal-left">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
-            <p className="home-about-body">
+            <p className="home-about-body reveal-child">
               I fell in love with programming and I have at least learnt
               something, I think… 🤷‍♂️
               <br />
@@ -54,14 +55,14 @@ function Home2() {
               </i>
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={4} className="myAvtar reveal-right">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
         <Row>
-          <Col md={12} className="home-about-social">
+          <Col md={12} className="home-about-social reveal">
             <h1>FIND ME ON</h1>
             <p>
               Feel free to <span className="purple">connect </span>with me
